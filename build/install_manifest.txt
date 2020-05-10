@@ -1,0 +1,2 @@
+/usr/lib/libaddcomp.so
+/usr/include/addcomp.h

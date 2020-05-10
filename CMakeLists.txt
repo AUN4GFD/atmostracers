@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.10)
+project(addcomp VERSION 0.0.0)
+SET(mylibSRCS addcomp.c)
+ADD_LIBRARY(addcomp SHARED ${mylibSRCS})
+target_link_libraries(addcomp m surface)
+set_target_properties(addcomp PROPERTIES PUBLIC_HEADER addcomp.h)
+enable_testing()
+SET(CPACK_GENERATOR "DEB")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Max H. Balsmeier")
+SET(CPACK_PACKAGE_NAME "addcomp")
+INCLUDE(CPack)
+include(GNUInstallDirs)
+install(TARGETS addcomp 
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})

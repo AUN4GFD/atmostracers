@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/max/my_code/lib/addcomp/addcomp.c
+surface.h
+/home/max/my_code/lib/addcomp/surface.h
+addcomp.h
+/home/max/my_code/lib/addcomp/addcomp.h
+math.h
+-
+stdlib.h
+-
+
+/home/max/my_code/lib/addcomp/addcomp.h
+

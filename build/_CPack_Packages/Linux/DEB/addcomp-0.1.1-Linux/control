@@ -1,0 +1,9 @@
+Package: addcomp
+Version: 0.1.1
+Section: devel
+Priority: optional
+Architecture: amd64
+Installed-Size: 25
+Maintainer: Max H. Balsmeier
+Description: addcomp built using CMake
+

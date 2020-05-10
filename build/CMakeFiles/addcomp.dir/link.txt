@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libaddcomp.so -o libaddcomp.so CMakeFiles/addcomp.dir/addcomp.c.o -lm -lsurface 

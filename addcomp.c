@@ -1,4 +1,4 @@
-#include "/lib/surface/include/surface.h"
+#include "surface.h"
 #include "addcomp.h"
 #include <math.h>
 #include <stdlib.h>
