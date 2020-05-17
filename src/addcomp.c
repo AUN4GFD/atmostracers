@@ -1,5 +1,5 @@
 #include "surface.h"
-#include "addcomp.h"
+#include "../include/addcomp.h"
 #include <math.h>
 #include <stdlib.h>
 #define N_A (6.0221409e23)
@@ -9,12 +9,12 @@
 #define R_V (R/M_V)
 #define T_0 273.15
 
-double ret_sink_velocity(long solid_or_liquid, long subcategory, double radius)
+double ret_sink_velocity(int solid_or_liquid, int subcategory, double radius)
 {
     return -0.1;
 }
 
-double ret_phase_trans_heat(short direction, double temperature)
+double ret_phase_trans_heat(int direction, double temperature)
 {
     /*
     directions:
@@ -32,7 +32,7 @@ double ret_phase_trans_heat(short direction, double temperature)
     return result;
 }
 
-int calc_add_comp_source_rates(double mass_source_rates[], double heat_source_rates[], double densities[], double comp_temps[], double temperature[], long number_of_add_comps, long number_of_scalars, double delta_t)
+int calc_add_comp_source_rates(double mass_source_rates[], double heat_source_rates[], double densities[], double comp_temps[], double temperature[], int number_of_add_comps, int number_of_scalars, double delta_t)
 {
     double *saturation_pressure = malloc(number_of_scalars*sizeof(double));
     double *water_vapour_pressure = malloc(number_of_scalars*sizeof(double));
@@ -120,7 +120,7 @@ double saturation_pressure_over_ice(double temperature)
 }
 
 
-double ret_c_p_cond(long solid_or_liquid, long subcategory, double temp)
+double ret_c_p_cond(int solid_or_liquid, int subcategory, double temp)
 {
     double result;
     if (solid_or_liquid == 0)

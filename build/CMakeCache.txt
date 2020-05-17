@@ -250,8 +250,8 @@ CPACK_SOURCE_ZIP:BOOL=OFF
 //Value Computed by CMake
 addcomp_BINARY_DIR:STATIC=/home/max/my_code/lib/addcomp/build
 
-//Dependencies for the target
-addcomp_LIB_DEPENDS:STATIC=general;m;general;surface;
+//Dependencies for target
+addcomp_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 addcomp_SOURCE_DIR:STATIC=/home/max/my_code/lib/addcomp

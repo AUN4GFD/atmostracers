@@ -57,38 +57,38 @@ include CMakeFiles/addcomp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/addcomp.dir/flags.make
 
-CMakeFiles/addcomp.dir/addcomp.c.o: CMakeFiles/addcomp.dir/flags.make
-CMakeFiles/addcomp.dir/addcomp.c.o: ../addcomp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/max/my_code/lib/addcomp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/addcomp.dir/addcomp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/addcomp.dir/addcomp.c.o   -c /home/max/my_code/lib/addcomp/addcomp.c
+CMakeFiles/addcomp.dir/src/addcomp.c.o: CMakeFiles/addcomp.dir/flags.make
+CMakeFiles/addcomp.dir/src/addcomp.c.o: ../src/addcomp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/max/my_code/lib/addcomp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/addcomp.dir/src/addcomp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/addcomp.dir/src/addcomp.c.o   -c /home/max/my_code/lib/addcomp/src/addcomp.c
 
-CMakeFiles/addcomp.dir/addcomp.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/addcomp.dir/addcomp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/max/my_code/lib/addcomp/addcomp.c > CMakeFiles/addcomp.dir/addcomp.c.i
+CMakeFiles/addcomp.dir/src/addcomp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/addcomp.dir/src/addcomp.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/max/my_code/lib/addcomp/src/addcomp.c > CMakeFiles/addcomp.dir/src/addcomp.c.i
 
-CMakeFiles/addcomp.dir/addcomp.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/addcomp.dir/addcomp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/max/my_code/lib/addcomp/addcomp.c -o CMakeFiles/addcomp.dir/addcomp.c.s
+CMakeFiles/addcomp.dir/src/addcomp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/addcomp.dir/src/addcomp.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/max/my_code/lib/addcomp/src/addcomp.c -o CMakeFiles/addcomp.dir/src/addcomp.c.s
 
-CMakeFiles/addcomp.dir/addcomp.c.o.requires:
+CMakeFiles/addcomp.dir/src/addcomp.c.o.requires:
 
-.PHONY : CMakeFiles/addcomp.dir/addcomp.c.o.requires
+.PHONY : CMakeFiles/addcomp.dir/src/addcomp.c.o.requires
 
-CMakeFiles/addcomp.dir/addcomp.c.o.provides: CMakeFiles/addcomp.dir/addcomp.c.o.requires
-	$(MAKE) -f CMakeFiles/addcomp.dir/build.make CMakeFiles/addcomp.dir/addcomp.c.o.provides.build
-.PHONY : CMakeFiles/addcomp.dir/addcomp.c.o.provides
+CMakeFiles/addcomp.dir/src/addcomp.c.o.provides: CMakeFiles/addcomp.dir/src/addcomp.c.o.requires
+	$(MAKE) -f CMakeFiles/addcomp.dir/build.make CMakeFiles/addcomp.dir/src/addcomp.c.o.provides.build
+.PHONY : CMakeFiles/addcomp.dir/src/addcomp.c.o.provides
 
-CMakeFiles/addcomp.dir/addcomp.c.o.provides.build: CMakeFiles/addcomp.dir/addcomp.c.o
+CMakeFiles/addcomp.dir/src/addcomp.c.o.provides.build: CMakeFiles/addcomp.dir/src/addcomp.c.o
 
 
 # Object files for target addcomp
 addcomp_OBJECTS = \
-"CMakeFiles/addcomp.dir/addcomp.c.o"
+"CMakeFiles/addcomp.dir/src/addcomp.c.o"
 
 # External object files for target addcomp
 addcomp_EXTERNAL_OBJECTS =
 
-libaddcomp.so: CMakeFiles/addcomp.dir/addcomp.c.o
+libaddcomp.so: CMakeFiles/addcomp.dir/src/addcomp.c.o
 libaddcomp.so: CMakeFiles/addcomp.dir/build.make
 libaddcomp.so: CMakeFiles/addcomp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/max/my_code/lib/addcomp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library libaddcomp.so"
@@ -99,7 +99,7 @@ CMakeFiles/addcomp.dir/build: libaddcomp.so
 
 .PHONY : CMakeFiles/addcomp.dir/build
 
-CMakeFiles/addcomp.dir/requires: CMakeFiles/addcomp.dir/addcomp.c.o.requires
+CMakeFiles/addcomp.dir/requires: CMakeFiles/addcomp.dir/src/addcomp.c.o.requires
 
 .PHONY : CMakeFiles/addcomp.dir/requires
 

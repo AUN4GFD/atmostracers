@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/max/my_code/lib/addcomp/addcomp.c
+/home/max/my_code/lib/addcomp/include/addcomp.h
+
+/home/max/my_code/lib/addcomp/src/addcomp.c
 surface.h
-/home/max/my_code/lib/addcomp/surface.h
-addcomp.h
-/home/max/my_code/lib/addcomp/addcomp.h
+/home/max/my_code/lib/addcomp/src/surface.h
+../include/addcomp.h
+/home/max/my_code/lib/addcomp/include/addcomp.h
 math.h
 -
 stdlib.h
 -
-
-/home/max/my_code/lib/addcomp/addcomp.h
 

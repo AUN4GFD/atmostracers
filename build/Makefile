@@ -202,32 +202,32 @@ addcomp/fast:
 	$(MAKE) -f CMakeFiles/addcomp.dir/build.make CMakeFiles/addcomp.dir/build
 .PHONY : addcomp/fast
 
-addcomp.o: addcomp.c.o
+src/addcomp.o: src/addcomp.c.o
 
-.PHONY : addcomp.o
+.PHONY : src/addcomp.o
 
 # target to build an object file
-addcomp.c.o:
-	$(MAKE) -f CMakeFiles/addcomp.dir/build.make CMakeFiles/addcomp.dir/addcomp.c.o
-.PHONY : addcomp.c.o
+src/addcomp.c.o:
+	$(MAKE) -f CMakeFiles/addcomp.dir/build.make CMakeFiles/addcomp.dir/src/addcomp.c.o
+.PHONY : src/addcomp.c.o
 
-addcomp.i: addcomp.c.i
+src/addcomp.i: src/addcomp.c.i
 
-.PHONY : addcomp.i
+.PHONY : src/addcomp.i
 
 # target to preprocess a source file
-addcomp.c.i:
-	$(MAKE) -f CMakeFiles/addcomp.dir/build.make CMakeFiles/addcomp.dir/addcomp.c.i
-.PHONY : addcomp.c.i
+src/addcomp.c.i:
+	$(MAKE) -f CMakeFiles/addcomp.dir/build.make CMakeFiles/addcomp.dir/src/addcomp.c.i
+.PHONY : src/addcomp.c.i
 
-addcomp.s: addcomp.c.s
+src/addcomp.s: src/addcomp.c.s
 
-.PHONY : addcomp.s
+.PHONY : src/addcomp.s
 
 # target to generate assembly for a file
-addcomp.c.s:
-	$(MAKE) -f CMakeFiles/addcomp.dir/build.make CMakeFiles/addcomp.dir/addcomp.c.s
-.PHONY : addcomp.c.s
+src/addcomp.c.s:
+	$(MAKE) -f CMakeFiles/addcomp.dir/build.make CMakeFiles/addcomp.dir/src/addcomp.c.s
+.PHONY : src/addcomp.c.s
 
 # Help Target
 help:
@@ -245,9 +245,9 @@ help:
 	@echo "... test"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... addcomp.o"
-	@echo "... addcomp.i"
-	@echo "... addcomp.s"
+	@echo "... src/addcomp.o"
+	@echo "... src/addcomp.i"
+	@echo "... src/addcomp.s"
 .PHONY : help
 
 
