@@ -1,0 +1,9 @@
+Architecture: amd64
+Description: atmostracers built using CMake
+Maintainer: Max H. Balsmeier
+Package: atmostracers
+Priority: optional
+Section: devel
+Version: 0.1.10
+Installed-Size: 29
+
