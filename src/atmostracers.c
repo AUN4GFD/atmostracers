@@ -1,3 +1,8 @@
+/*
+This source file is part of the atmostracers library, which is released under the MIT license.
+Github repository: https://github.com/MHBalsmeier/atmostracers
+*/
+
 #include "surface.h"
 #include "../include/atmostracers.h"
 #include <math.h>
