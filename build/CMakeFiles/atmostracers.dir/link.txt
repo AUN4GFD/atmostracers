@@ -1,1 +1,1 @@
-/usr/bin/cc -fPIC   -shared -Wl,-soname,libatmostracers.so -o libatmostracers.so CMakeFiles/atmostracers.dir/src/atmostracers.c.o 
+/usr/bin/mpicc -fPIC  -O3  -shared -Wl,-soname,libatmostracers.so -o libatmostracers.so CMakeFiles/atmostracers.dir/src/atmostracers.c.o 

@@ -3,7 +3,6 @@ This source file is part of the atmostracers library, which is released under th
 Github repository: https://github.com/MHBalsmeier/atmostracers
 */
 
-#include "surface.h"
 #include "../include/atmostracers.h"
 #include <math.h>
 #include <stdlib.h>

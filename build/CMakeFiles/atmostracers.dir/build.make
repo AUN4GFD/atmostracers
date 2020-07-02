@@ -60,15 +60,15 @@ include CMakeFiles/atmostracers.dir/flags.make
 CMakeFiles/atmostracers.dir/src/atmostracers.c.o: CMakeFiles/atmostracers.dir/flags.make
 CMakeFiles/atmostracers.dir/src/atmostracers.c.o: ../src/atmostracers.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/max/my_code/lib/atmostracers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/atmostracers.dir/src/atmostracers.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmostracers.dir/src/atmostracers.c.o   -c /home/max/my_code/lib/atmostracers/src/atmostracers.c
+	/usr/bin/mpicc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/atmostracers.dir/src/atmostracers.c.o   -c /home/max/my_code/lib/atmostracers/src/atmostracers.c
 
 CMakeFiles/atmostracers.dir/src/atmostracers.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atmostracers.dir/src/atmostracers.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/max/my_code/lib/atmostracers/src/atmostracers.c > CMakeFiles/atmostracers.dir/src/atmostracers.c.i
+	/usr/bin/mpicc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/max/my_code/lib/atmostracers/src/atmostracers.c > CMakeFiles/atmostracers.dir/src/atmostracers.c.i
 
 CMakeFiles/atmostracers.dir/src/atmostracers.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atmostracers.dir/src/atmostracers.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/max/my_code/lib/atmostracers/src/atmostracers.c -o CMakeFiles/atmostracers.dir/src/atmostracers.c.s
+	/usr/bin/mpicc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/max/my_code/lib/atmostracers/src/atmostracers.c -o CMakeFiles/atmostracers.dir/src/atmostracers.c.s
 
 # Object files for target atmostracers
 atmostracers_OBJECTS = \
