@@ -11,3 +11,4 @@ double saturation_pressure_over_ice(double);
 double ret_c_p_cond(int, int, double);
 double ret_c_v_cond(int, int, double);
 double ret_phase_trans_heat(int, double);
+double rel_humidity(double, double);

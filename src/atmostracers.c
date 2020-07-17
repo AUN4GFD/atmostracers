@@ -112,6 +112,18 @@ double water_vapour_density_from_rel_humidity(double rel_humidity, double temper
     return water_vapour_density;
 }
 
+double rel_humidity(double abs_humidity, double temperature)
+{
+	double vapour_pressure = abs_humidity*R_V*temperature;
+	double saturation_pressure;
+	if (temperature > 0)
+		saturation_pressure = saturation_pressure_over_water(temperature);
+	if (temperature <= 0)
+		saturation_pressure = saturation_pressure_over_ice(temperature);
+	double result = vapour_pressure/saturation_pressure;
+	return result;
+}
+
 double saturation_pressure_over_water(double temperature)
 {
     double temp_c = temperature - T_0;
