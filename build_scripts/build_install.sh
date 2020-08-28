@@ -10,10 +10,11 @@ ctest
 cpack -G DEB
 version_major=0
 version_minor=1
-version_patch=12
+version_patch=1
 mv $libname-$version_major.$version_minor.$version_patch-Linux.deb $libname.deb
 if [ -f $libname.deb ]
 then
+sudo apt remove $libname
 sudo apt-get install ./$libname.deb
 cp $libname.deb ~/compiled/debs
 fi
