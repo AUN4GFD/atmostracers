@@ -1,3 +1,5 @@
+#!/bin/bash
+
 libname=atmostracers
 if [ -d build ]
 then
