@@ -10,5 +10,5 @@ This is for Ubuntu, but most of it should be valid for all Linux distributions.
 
 Go to the directory from which you do out-of-source builds.
 
-	git clone https://github.com/MHBalsmeier/atmostracers.git && cd atmostracers && ./build_scripts/build_install.sh
+	git clone https://github.com/MHBalsmeier/atmostracers.git && cd atmostracers && ./build_scripts/build_install.sh && cd ..
 	
