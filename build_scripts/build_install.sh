@@ -16,7 +16,6 @@ version_patch=2
 mv $libname-$version_major.$version_minor.$version_patch-Linux.deb $libname.deb
 if [ -f $libname.deb ]
 then
-sudo apt remove $libname
 sudo apt-get install ./$libname.deb
 if [ ! -d  ~/compiled/debs ]
 then
