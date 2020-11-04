@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ..
 libname=atmostracers
 if [ -d build ]
 then
@@ -15,4 +16,4 @@ version_minor=1
 version_patch=2
 mv $libname-$version_major.$version_minor.$version_patch-Linux.deb $libname.deb
 cd ..
-
+cd build_scripts

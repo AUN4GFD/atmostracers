@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ..
 libname=atmostracers
 if [ -d build ]
 then
@@ -24,4 +25,5 @@ fi
 cp $libname.deb ~/compiled/debs/$libname.deb
 fi
 cd ..
+cd build_scripts
 
