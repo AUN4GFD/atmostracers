@@ -13,10 +13,27 @@ Github repository: https://github.com/MHBalsmeier/atmostracers
 #define R_V (R/M_V)
 #define T_0 273.15
 #define EPSILON 1e-10
+#define DENSITY_WATER 1024.0
+#define GRAVITY 9.8
 
-double ret_sink_velocity(int solid_or_liquid, int subcategory, double radius)
+double ret_sink_velocity(int solid_or_liquid, double radius, double air_density)
 {
-    return 0.1;
+	double dry_air_kinematic_viscosity = 14.8e-6;
+	
+	double result = 0;
+	// The solid case.
+	if (solid_or_liquid == 0)
+	{
+		result = 2*M_PI*pow(radius, 2)*DENSITY_WATER*GRAVITY/(9*M_PI*air_density*dry_air_kinematic_viscosity);
+	}
+	
+	// The liquid case.
+	if (solid_or_liquid == 1)
+	{
+		result = 2*M_PI*pow(radius, 2)*DENSITY_WATER*GRAVITY/(9*M_PI*air_density*dry_air_kinematic_viscosity);
+	}
+	
+    return result;
 }
 
 double ret_phase_trans_heat(int direction, double temperature)

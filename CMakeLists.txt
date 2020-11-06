@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 set(version_major 0)
 set(version_minor 1)
-set(version_patch 3)
+set(version_patch 4)
 set(CMAKE_C_COMPILER mpicc)
 add_definitions(-Wall)
 # find_package(OpenMP)
@@ -23,5 +23,5 @@ SET(CPACK_PACKAGE_VERSION_PATCH ${version_patch})
 INCLUDE(CPack)
 include(GNUInstallDirs)
 install(TARGETS atmostracers
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+	PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})

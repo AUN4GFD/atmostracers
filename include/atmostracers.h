@@ -3,7 +3,7 @@ This source file is part of the atmostracers library, which is released under th
 Github repository: https://github.com/MHBalsmeier/atmostracers
 */
 
-double ret_sink_velocity(int, int, double);
+double ret_sink_velocity(int, double, double);
 int calc_h2otracers_source_rates(double[], double[], double[], double[], double[], int, int, double);
 double water_vapour_density_from_rel_humidity(double, double, double);
 double saturation_pressure_over_water(double);
