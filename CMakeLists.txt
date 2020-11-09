@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 set(version_major 0)
 set(version_minor 1)
-set(version_patch 5)
+set(version_patch 6)
 set(CMAKE_C_COMPILER mpicc)
 add_definitions(-Wall)
 # find_package(OpenMP)
