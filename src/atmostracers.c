@@ -19,18 +19,38 @@ Github repository: https://github.com/MHBalsmeier/atmostracers
 double ret_sink_velocity(int solid_or_liquid, double radius, double air_density)
 {
 	double dry_air_kinematic_viscosity = 14.8e-6;
+	double reynolds_crit = 10;
+	double drag_coeff = 1;
 	
-	double result = 0;
+	// First of all, a laminar sink velocity is calculated from the Stokes law.
+	double laminar_velocity_candidate = 0;
 	// The solid case.
 	if (solid_or_liquid == 0)
 	{
-		result = 2*M_PI*pow(radius, 2)*DENSITY_WATER*GRAVITY/(9*M_PI*air_density*dry_air_kinematic_viscosity);
+		laminar_velocity_candidate = 2*M_PI*pow(radius, 2)*DENSITY_WATER*GRAVITY/(9*M_PI*air_density*dry_air_kinematic_viscosity);
 	}
 	
 	// The liquid case.
 	if (solid_or_liquid == 1)
 	{
-		result = 2*M_PI*pow(radius, 2)*DENSITY_WATER*GRAVITY/(9*M_PI*air_density*dry_air_kinematic_viscosity);
+		laminar_velocity_candidate = 2*M_PI*pow(radius, 2)*DENSITY_WATER*GRAVITY/(9*M_PI*air_density*dry_air_kinematic_viscosity);
+	}
+	
+	// calculating the Reynolds number resulting from the laminar velocity
+	double reynolds_from_laminar;
+	reynolds_from_laminar = laminar_velocity_candidate*radius/dry_air_kinematic_viscosity;
+	
+	// calculating the resulting sink velocity
+	double result;
+	// the laminar case
+	if (reynolds_from_laminar <= reynolds_crit)
+	{
+		result = laminar_velocity_candidate;
+	}
+	// the turbulent case
+	else
+	{
+		result = pow(8*radius*DENSITY_WATER*GRAVITY/(3*air_density*drag_coeff), 0.5);
 	}
 	
     return result;
