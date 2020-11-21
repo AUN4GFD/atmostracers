@@ -315,7 +315,16 @@ double ret_c_v_cond(int solid_or_liquid, int subcategory, double temp)
 /*
 gaseous constituents IDs:
 0: dry air
-1: water vapour
+1: H2O
+2: N2
+3: O2
+4: Ar
+5: CO2
+6: Ne
+7: He
+8: CH4
+9: CO
+10: O3
 */
 
 double entropy_constants_gas_lookup(int gas_constituent_id)
@@ -384,6 +393,48 @@ double specific_gas_constants_lookup(int gas_constituent_id)
 	if (gas_constituent_id == 1)
 	{
 		result = 461.524879;
+	}
+	return result;
+}
+
+double molar_fraction_in_dry_air(int gas_constituent_id)
+{
+	double result = 0;
+	if (gas_constituent_id == 2)
+	{
+		result = 0.7809;
+	}
+	if (gas_constituent_id == 3)
+	{
+		result = 0.2095;
+	}
+	if (gas_constituent_id == 4)
+	{
+		result = 0.0093;
+	}
+	if (gas_constituent_id == 5)
+	{
+		result = 0.0003;
+	}
+	if (gas_constituent_id == 6)
+	{
+		result = 1.8e-5;
+	}
+	if (gas_constituent_id == 7)
+	{
+		result = 5.2e-6;
+	}
+	if (gas_constituent_id == 8)
+	{
+		result = 1.5e-6;
+	}
+	if (gas_constituent_id == 9)
+	{
+		result = 1.0e-7;
+	}
+	if (gas_constituent_id == 10)
+	{
+		result = 1e-6;
 	}
 	return result;
 }
