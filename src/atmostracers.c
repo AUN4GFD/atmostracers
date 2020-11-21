@@ -397,6 +397,7 @@ double specific_gas_constants_lookup(int gas_constituent_id)
 	return result;
 }
 
+// This follows Zdunkowski & Bott: Thermodynamics of the Atmosphere (2004), pp. 120ff.
 double molar_fraction_in_dry_air(int gas_constituent_id)
 {
 	double result = 0;
