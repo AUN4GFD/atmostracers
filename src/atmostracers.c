@@ -325,6 +325,7 @@ gaseous constituents IDs:
 8: CH4
 9: CO
 10: O3
+11: N2O
 */
 
 double entropy_constants_gas_lookup(int gas_constituent_id)
@@ -436,6 +437,11 @@ double molar_fraction_in_dry_air(int gas_constituent_id)
 	if (gas_constituent_id == 10)
 	{
 		result = 1e-6;
+	}
+	if (gas_constituent_id == 11)
+	{
+	    // https://www.epa.gov/climate-indicators/climate-change-indicators-atmospheric-concentrations-greenhouse-gases
+		result = 0.3e-6;
 	}
 	return result;
 }
