@@ -13,7 +13,7 @@ ctest
 cpack -G DEB
 version_major=0
 version_minor=1
-version_patch=8
+version_patch=9
 mv $libname-$version_major.$version_minor.$version_patch-Linux.deb $libname.deb
 if [ -f $libname.deb ]
 then
