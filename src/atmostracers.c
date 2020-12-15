@@ -6,11 +6,6 @@ Github repository: https://github.com/MHBalsmeier/atmostracers
 #include "../include/atmostracers.h"
 #include <math.h>
 #include <stdlib.h>
-#define N_A (6.0221409e23)
-#define K_B (1.380649e-23)
-#define M_V 0.01801527
-#define R (N_A*K_B)
-#define R_V (R/M_V)
 #define T_0 273.15
 #define EPSILON (1e-10)
 #define DENSITY_WATER 1024.0
@@ -88,6 +83,7 @@ int calc_h2otracers_source_rates(double mass_source_rates[], double heat_source_
 	*/
     double diff_density, phase_trans_density, saturation_pressure, water_vapour_pressure, solid_temperature, liquid_temperature;
     // loop over all grid boxes
+    #pragma omp parallel for private(diff_density, phase_trans_density, saturation_pressure, water_vapour_pressure, solid_temperature, liquid_temperature)
     for (int i = 0; i < number_of_scalars; ++i)
     {
     	// determining the temperature of the ice
@@ -121,10 +117,10 @@ int calc_h2otracers_source_rates(double mass_source_rates[], double heat_source_
 		}
 		
 		// determining the water vapour pressure
-        water_vapour_pressure = densities[3*number_of_scalars + i]*R_V*temperature[i];
+        water_vapour_pressure = densities[3*number_of_scalars + i]*specific_gas_constants_lookup(1)*temperature[i];
         
     	// the amount of water vapour that the air can still take 
-        diff_density = (saturation_pressure - water_vapour_pressure)/(R_V*temperature[i]);
+        diff_density = (saturation_pressure - water_vapour_pressure)/(specific_gas_constants_lookup(1)*temperature[i]);
         
         // the case where the air is not over-saturated
         if (diff_density >= 0)
@@ -245,13 +241,13 @@ int calc_h2otracers_source_rates(double mass_source_rates[], double heat_source_
 
 double water_vapour_density_from_rel_humidity(double rel_humidity, double temperature, double density)
 {
-    double water_vapour_density = rel_humidity*saturation_pressure_over_water(temperature)/(R_V*temperature);
+    double water_vapour_density = rel_humidity*saturation_pressure_over_water(temperature)/(specific_gas_constants_lookup(1)*temperature);
     return water_vapour_density;
 }
 
 double rel_humidity(double abs_humidity, double temperature)
 {
-	double vapour_pressure = abs_humidity*R_V*temperature;
+	double vapour_pressure = abs_humidity*specific_gas_constants_lookup(1)*temperature;
 	double saturation_pressure;
 	if (temperature > T_0)
 	{
