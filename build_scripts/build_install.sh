@@ -18,11 +18,6 @@ mv $libname-$version_major.$version_minor.$version_patch-Linux.deb $libname.deb
 if [ -f $libname.deb ]
 then
 sudo apt-get install ./$libname.deb
-if [ ! -d  ~/compiled/debs ]
-then
-mkdir ~/compiled/debs
-fi
-cp $libname.deb ~/compiled/debs/$libname.deb
 fi
 cd ..
 cd build_scripts
