@@ -2,7 +2,7 @@ atmostracers is a library for tracers including water in atmospheres.
 
 ## Dependencies
 
-None.
+* OpenMPI (Ubuntu: sudo apt-get install mpich)
 
 ## Installation
 
