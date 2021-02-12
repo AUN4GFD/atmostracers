@@ -10,6 +10,7 @@ Github repository: https://github.com/AUN4GFD/atmostracers
 #define EPSILON (1e-10)
 #define DENSITY_WATER 1024.0
 #define GRAVITY 9.8
+#define P_0 100000.0
 
 double ret_sink_velocity(int solid_or_liquid, double radius, double air_density)
 {
@@ -442,6 +443,33 @@ double molar_fraction_in_dry_air(int gas_constituent_id)
 	return result;
 }
 
+
+double solve_specific_entropy_for_density(double specific_entropy, double temperature)
+{
+	// returns the density as a function of the specific entropy and the temperature
+	/*
+	old version, using Sackur-Tetrode equation
+	double mean_particle_mass = 0.004810e-23;
+	double entropy_constant = 2429487178047751925300627872548148580712448.000000;
+    double particle_density = exp(-mean_particle_mass*specific_entropy/K_B)*pow(entropy_constant, 1.5)*pow(mean_particle_mass*C_D_V*temperature, 1.5);
+    double result = particle_density*mean_particle_mass;
+    */
+	double R_D = specific_gas_constants_lookup(0);
+	double C_D_V = spec_heat_capacities_v_gas_lookup(0);
+    double result = P_0/R_D*pow(temperature, C_D_V/R_D)*exp(-specific_entropy/R_D);
+    return result;
+}
+
+double spec_entropy_from_temp(double mass_density, double temperature)
+{
+	double R_D = specific_gas_constants_lookup(0);
+	double C_D_P = spec_heat_capacities_p_gas_lookup(0);
+	double pressure = mass_density*R_D*temperature;
+	double pot_temp = temperature*pow(P_0/pressure, R_D/C_D_P);
+	double result;
+	result = C_D_P*log(pot_temp);
+	return result;
+}
 
 
 

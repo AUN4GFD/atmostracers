@@ -17,3 +17,5 @@ double mean_particle_masses_gas_lookup(int);
 double spec_heat_capacities_v_gas_lookup(int);
 double spec_heat_capacities_p_gas_lookup(int);
 double specific_gas_constants_lookup(int);
+double solve_specific_entropy_for_density(double, double);
+double spec_entropy_from_temp(double, double);
