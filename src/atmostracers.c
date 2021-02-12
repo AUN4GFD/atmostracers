@@ -1,6 +1,6 @@
 /*
 This source file is part of the atmostracers library, which is released under the MIT license.
-Github repository: https://github.com/MHBalsmeier/atmostracers
+Github repository: https://github.com/AUN4GFD/atmostracers
 */
 
 #include "../include/atmostracers.h"
