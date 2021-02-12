@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 set(version_major 0)
 set(version_minor 1)
-set(version_patch 11)
+set(version_patch 12)
 set(CMAKE_C_COMPILER mpicc)
 add_definitions(-Wall)
 set(version ${version_major}.${version_minor}.${version_patch})
